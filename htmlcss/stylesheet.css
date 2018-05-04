@@ -3,6 +3,11 @@ body, div, p{
 	margin: 0;
 	padding: 0;
 }
+ul{
+	list-style-type: none;
+	margin:0;
+	padding:0;
+}
 
 
 /*アカウント作成ページ*/
@@ -28,7 +33,7 @@ body, div, p{
 .a-main{
 	/*横幅と高さ*/
 	width: 100%;
-	height: 80%;
+	height: 81%;
 	/*背景色*/
 	background-color: #66CCCC;
 	color:#FFF;
@@ -64,6 +69,20 @@ body, div, p{
 }
 
 /*アラーム設定ページ*/
+.day{
+	font-size: 40px;
+	text-align: left;
+	margin-bottom: 1px;
+}
+.day span{
+	margin-left: 90px;
+	border-bottom: 1px solid #FFF;
+	border-top: 1px solid #FFF;
+}
+
+
+/*マッチングページ*/
+/*グループページ*/
 li{
 	list-style: none;
 }
@@ -72,10 +91,6 @@ li{
 	justify-content: space-evenly;
 	padding: 10px;
 }
-
-
-/*マッチングページ*/
-
 /*起床ページ*/
 
 /*結果ページ*/
@@ -85,9 +100,32 @@ li{
 	height: 600px;
 	background-color: #111;
 	opacity: .8;
+	color:#FFF;
 }
 .r-suc{
 	color: #fff;
+	font-size:60px;
+	display: flex;
+	justify-content: space-evenly;
+	border-top: 1px solid #FFF;
+	
+}
+.r-text{
+	font-size: 20px;
+	text-align: center;
+	
+	
+}
+.r-text span{
+	color:#ff0000;
+}
+.ranking{
+	text-align: center;
+	font-size: 30px;
+}
+.ranking span{
+	font-size: 50px;
+	color: gold;
 }
 
 
