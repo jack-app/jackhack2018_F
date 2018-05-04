@@ -14,7 +14,7 @@ public class SubmitButton : MonoBehaviour
 	// Use this for initialization
     void Start()
     {
-        milkcocoa = FindObjectOfType<MilkcocoaClient>();
+        this.milkcocoa = FindObjectOfType<MilkcocoaClient>();
     }
 
 	// update is called once per frame
@@ -25,8 +25,8 @@ public class SubmitButton : MonoBehaviour
 
     public void OnClick()
     {
-        string speakerName = GameObject.Find("Canvas/NameInputField/Text").GetComponent<Text>().text ?? string.Empty;
-        string message = GameObject.Find("Canvas/MessageInputField/Text").GetComponent<Text>().text ?? string.Empty;
+        string speakerName = GameObject.Find("Canvas/NameInputField/Name").GetComponent<Text>().text ?? string.Empty;
+        string message = GameObject.Find("Canvas/MessageInputField/Message").GetComponent<Text>().text ?? string.Empty;
         // Debug.Log("clicked");
         // Debug.Log(userName);
         // Debug.Log(message);
@@ -42,7 +42,7 @@ public class SubmitButton : MonoBehaviour
             values.AddField("chat", (JSONObject chat) =>
             {
 				chat.AddField("speakerName", Uri.EscapeDataString(speakerName));
-				chat.AddField("messsage", Uri.EscapeDataString(message));
+				chat.AddField("message", Uri.EscapeDataString(message));
             });
         });
         Debug.Log(jsonobj);

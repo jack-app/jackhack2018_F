@@ -50,7 +50,6 @@ public class testUI : MonoBehaviour {
                 chat.AddField("message", Uri.EscapeDataString(str));
             });
         });
-        Debug.Log(jsonobj);
         return jsonobj;
     }
     public void milkcocoaEventHandler(MilkcocoaEvent e)
