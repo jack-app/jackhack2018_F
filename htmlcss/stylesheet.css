@@ -35,7 +35,7 @@ ul{
 	width: 100%;
 	height: 81%;
 	/*背景色*/
-	background-color: #66CCCC;
+	background:linear-gradient(-135deg,#66CCCC,#33CCFF) ;
 	color:#FFF;
 	font-size:20px;
 	text-align: center;
@@ -101,8 +101,6 @@ li{
 	justify-content: space-evenly;
 	padding: 10px;
 }
-<<<<<<< HEAD
-=======
 
 
 /*マッチングページ*/
@@ -110,7 +108,6 @@ li{
 	margin-top: 40%;;
 }
 
->>>>>>> 3f30c05b20fd8c8cebd97de92de1dc0efc295b51
 /*起床ページ*/
 
 /*結果ページ*/
@@ -118,6 +115,10 @@ li{
 	/*横幅と高さ*/
 	width: 100%;
 	height: 600px;
+	
+}
+.r-main{
+	height:91%;
 	background-color: #111;
 	opacity: .8;
 	color:#FFF;
@@ -127,11 +128,10 @@ li{
 	font-size:60px;
 	display: flex;
 	justify-content: space-evenly;
-	border-top: 1px solid #FFF;
 	
 }
 .r-text{
-	font-size: 20px;
+	font-size: 30px;
 	text-align: center;
 	
 	
@@ -141,11 +141,15 @@ li{
 }
 .ranking{
 	text-align: center;
-	font-size: 30px;
+	font-size: 20px;
 }
 .ranking span{
-	font-size: 50px;
+	font-size: 25px;
 	color: gold;
+}
+.r-footer{
+	background-color: #111;
+	height:9%;
 }
 
 
