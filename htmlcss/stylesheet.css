@@ -16,7 +16,7 @@ body, div, p{
 	width: 100%;
 	height: 10%;
 	/*下線*/
-	border-bottom: 1px solid #111;
+/*	border-bottom: 1px solid #fff;*/
 	/*背景色*/
 	background-color: #33CCFF;
 	font-size:40px;
@@ -46,14 +46,14 @@ body, div, p{
 .a-footer{
 	/*横幅と高さ*/
 	width: 100%;
-	height: 10%;
+	height: 9%;
 	/*上線*/
 	border-top: 1px solid #111;
 	/*右端寄せ*/
 	display: flex;
 	justify-content: space-between;
 	/*背景色*/
-	background-color: #66CCCC;
+	background-color: #111;
 	/*字*/
 	font-size:30px;
 	color:#FFF;
@@ -64,25 +64,6 @@ body, div, p{
 }
 
 /*アラーム設定ページ*/
-.al-body{
-	width:100%;
-	height:600px;
-}
-.al-header{
-	width: 100%;
-	height: 10%;
-	border-bottom: 1px solid #111;
-	background-color: #33CCFF;
-	font-size: 40px;
-	color: #FFF;
-}
-.al-main{
-	width:100%;
-	height:80%;
-	background-color: #66CCCC;
-	border-bottom: 1px solid #111;
-	
-}
 li{
 	list-style: none;
 }
@@ -90,11 +71,6 @@ li{
 	display: flex;
 	justify-content: space-evenly;
 	padding: 10px;
-}
-.al-footer{
-	width: 100%;
-	height:10%;
-	background-color: #66CCCC;
 }
 
 
