@@ -1,0 +1,45 @@
+/*初期化*/
+main, div{
+	margin: 0;
+	padding: 0;
+}
+
+
+/*アカウント作成ページ*/
+.a-body{
+	/*横幅と高さ*/
+	width: 100%;
+	height: 600px;
+}
+.a-header{
+	/*横幅と高さ*/
+	width: 100%;
+	height: 10%;
+	/*下線*/
+	border-bottom: 1px solid #111;
+}
+.a-main{
+	/*横幅と高さ*/
+	width: 100%;
+	height: 80%;
+}
+.a-footer{
+	/*横幅と高さ*/
+	width: 100%;
+	height: 10%;
+	/*上線*/
+	border-top: 1px solid #111;
+	/*右端寄せ*/
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+/*アラーム設定ページ*/
+
+
+/*マッチングページ*/
+
+/*起床ページ*/
+
+/*結果ページ*/
