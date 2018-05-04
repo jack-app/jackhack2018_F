@@ -144,5 +144,10 @@ li{
 	background-color: #111;
 	height:9%;
 }
-
+/*ランキングページ*/
+.rank1{
+	font-size:25px;
+	justify-content: space-evenly;
+	
+}
 
