@@ -1,13 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Milkcocoa;
 
 public class SubmitButton : MonoBehaviour
 {
 	private MilkcocoaClient milkcocoa;
-	GameObject nameInputField;
-	GameObject MessageInputField;
 
 
 	// イベント
@@ -15,8 +15,6 @@ public class SubmitButton : MonoBehaviour
     void Start()
     {
         milkcocoa = FindObjectOfType<MilkcocoaClient>();
-		this.nameInputField = GameObject.Find("NameInputField");
-		this.nameInputField = GameObject.Find("MessageInputField");
     }
 
 	// update is called once per frame
@@ -25,22 +23,29 @@ public class SubmitButton : MonoBehaviour
 
     }
 
-    void OnClick()
+    public void OnClick()
     {
+        string speakerName = GameObject.Find("Canvas/NameInputField/Text").GetComponent<Text>().text ?? string.Empty;
+        string message = GameObject.Find("Canvas/MessageInputField/Text").GetComponent<Text>().text ?? string.Empty;
+        // Debug.Log("clicked");
+        // Debug.Log(userName);
+        // Debug.Log(message);
+        milkcocoa.Send(createMessageJSON(speakerName, message));
     }
 
 
     // メソッド
-    private JSONObject composeMsgJSON(string str)
+    private JSONObject createMessageJSON(string speakerName, string message)
     {
         JSONObject jsonobj = new JSONObject((JSONObject values) =>
         {
             values.AddField("chat", (JSONObject chat) =>
             {
-				chat.AddField("name", Uri.EscapeDataString(userName));
-				chat.AddField("messsage")//途中
+				chat.AddField("speakerName", Uri.EscapeDataString(speakerName));
+				chat.AddField("messsage", Uri.EscapeDataString(message));
             });
         });
+        Debug.Log(jsonobj);
         return jsonobj;
     }
 }
