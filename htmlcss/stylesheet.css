@@ -51,7 +51,7 @@ body, div, p{
 	border-top: 1px solid #111;
 	/*右端寄せ*/
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	/*背景色*/
 	background-color: #66CCCC;
 	/*字*/
@@ -59,7 +59,9 @@ body, div, p{
 	color:#FFF;
 	font-family:sans-serif;
 }
-
+.a-footer div{
+	padding: 5px 20px;
+}
 
 /*アラーム設定ページ*/
 
