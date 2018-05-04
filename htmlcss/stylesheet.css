@@ -118,15 +118,33 @@ li{
 	font-size:60px;
 	display: flex;
 	justify-content: space-evenly;
-	
+	padding-top:20px;
 }
-.r-text{
+.r-text1{
 	font-size: 30px;
 	text-align: center;
-	
+	margin-bottom: 15px;
 	
 }
-.r-text span{
+.r-text2{
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 15px;
+	
+}
+.r-text3{
+	font-size: 30px;
+	text-align: center;
+	margin-bottom: 15px;
+	
+}
+.r-text1 span{
+	color:#ff0000;
+}
+.r-text2 span{
+	color:#ff0000;
+}
+.r-text3 span{
 	color:#ff0000;
 }
 .ranking{
