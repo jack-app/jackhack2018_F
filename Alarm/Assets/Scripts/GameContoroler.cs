@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using System;
 
 public class GameContoroler : MonoBehaviour {
     private int n;
@@ -36,7 +38,34 @@ public class GameContoroler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         StartCoroutine("Yabai");
+        StartCoroutine("Owata");
 
+        if (Input.GetAxisRaw("Submit") != 0)
+        {
+            FileStream fileMon = new FileStream("date_Mon.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileThu = new FileStream("date_Thu.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileWed = new FileStream("date_Wed.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileThe = new FileStream("date_The.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileFri = new FileStream("date_Fri.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileSat = new FileStream("date_Sat.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileSun = new FileStream("date_Sun.dat", FileMode.Create, FileAccess.Write);
+
+            BinaryWriter writerMon = new BinaryWriter(fileMon);
+            BinaryWriter writerThu = new BinaryWriter(fileThu);
+            BinaryWriter writerWed = new BinaryWriter(fileWed);
+            BinaryWriter writerThe = new BinaryWriter(fileThe);
+            BinaryWriter writerFri = new BinaryWriter(fileFri);
+            BinaryWriter writerSat = new BinaryWriter(fileSat);
+            BinaryWriter writerSun = new BinaryWriter(fileSun);
+
+            writerMon.Write(Mon);
+            writerThu.Write(Thu);
+            writerWed.Write(Wed);
+            writerThe.Write(The);
+            writerFri.Write(Fri);
+            writerSat.Write(Sat);
+            writerSun.Write(Sun);
+        }
 
     }
 
@@ -400,7 +429,12 @@ public class GameContoroler : MonoBehaviour {
             }else if(Mon_h == 25)
             {
                 Mon.text = "--:" + Mon_m.ToString();
-            }else if(Mon_m == 70)
+            }
+            else if (Mon_h < 10 && Mon_m == 70)
+            {
+                Mon.text = "0" + Mon_h.ToString() + ":--";
+            }
+            else if(Mon_m == 70)
             {
                 Mon.text = Mon_h.ToString() + ":--";
             }else if(Mon_h < 10 && Mon_m == 0)
@@ -426,6 +460,10 @@ public class GameContoroler : MonoBehaviour {
             else if (Thu_h == 25)
             {
                 Thu.text = "--:" + Thu_m.ToString();
+            }
+            else if (Thu_h < 10 && Thu_m == 70)
+            {
+                Thu.text = "0" + Thu_h.ToString() + ":--";
             }
             else if (Thu_m == 70)
             {
@@ -457,6 +495,10 @@ public class GameContoroler : MonoBehaviour {
             {
                 Wed.text = "--:" + Wed_m.ToString();
             }
+            else if (Wed_h < 10 && Wed_m == 70)
+            {
+                Wed.text = "0" + Wed_h.ToString() + ":--";
+            }
             else if (Wed_m == 70)
             {
                 Wed.text = Wed_h.ToString() + ":--";
@@ -486,6 +528,10 @@ public class GameContoroler : MonoBehaviour {
             else if (The_h == 25)
             {
                 The.text = "--:" + The_m.ToString();
+            }
+            else if (The_h < 10 && The_m == 70)
+            {
+                The.text = "0" + The_h.ToString() + ":--";
             }
             else if (The_m == 70)
             {
@@ -517,6 +563,10 @@ public class GameContoroler : MonoBehaviour {
             {
                 Fri.text = "--:" + Fri_m.ToString();
             }
+            else if (Fri_h < 10 && Fri_m == 70)
+            {
+                Fri.text = "0" + Fri_h.ToString() + ":--";
+            }
             else if (Fri_m == 70)
             {
                 Fri.text = Fri_h.ToString() + ":--";
@@ -546,6 +596,10 @@ public class GameContoroler : MonoBehaviour {
             else if (Sat_h == 25)
             {
                 Sat.text = "--:" + Sat_m.ToString();
+            }
+            else if (Sat_h < 10 && Sat_m == 70)
+            {
+                Sat.text = "0" + Sat_h.ToString() + ":--";
             }
             else if (Sat_m == 70)
             {
@@ -577,6 +631,10 @@ public class GameContoroler : MonoBehaviour {
             {
                 Sun.text = "--:" + Sun_m.ToString();
             }
+            else if(Sun_h < 10 && Sun_m == 70)
+            {
+                Sun.text = "0" + Sun_h.ToString() + ":--";
+            }
             else if (Sun_m == 70)
             {
                 Sun.text = Sun_h.ToString() + ":--";
@@ -597,7 +655,7 @@ public class GameContoroler : MonoBehaviour {
             {
                 Sun.text = Sun_h.ToString() + ":" + Sun_m.ToString();
             }
-
+            System.Threading.Thread.Sleep(200);
             yield return new WaitForSeconds(0.3f);
         }
     }
@@ -607,6 +665,8 @@ public class GameContoroler : MonoBehaviour {
         if (Input.GetAxisRaw("Horizontal") != 0)
         {
             n += (int)Input.GetAxisRaw("Horizontal");
+            
+            System.Threading.Thread.Sleep(200);
             yield return new WaitForSeconds(0.3f);
         }
     }
