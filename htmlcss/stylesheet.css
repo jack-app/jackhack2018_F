@@ -1,5 +1,5 @@
 /*初期化*/
-main, div{
+body, div, p{
 	margin: 0;
 	padding: 0;
 }
@@ -19,14 +19,30 @@ main, div{
 	border-bottom: 1px solid #111;
 	/*背景色*/
 	background-color: #33CCFF;
+	font-size:40px;
+	color:#FFF;
+	font-family: sans-serif;
+	
 }
+
 .a-main{
 	/*横幅と高さ*/
 	width: 100%;
 	height: 80%;
 	/*背景色*/
-	background-color: #008080;
+	background-color: #66CCCC;
+	color:#FFF;
+	font-size:20px;
+	text-align: center;
+	padding-top:20px;
 }
+.image1{
+	text-align: center;
+}
+.word2{
+	padding-bottom: 10px;
+}
+
 .a-footer{
 	/*横幅と高さ*/
 	width: 100%;
@@ -37,7 +53,11 @@ main, div{
 	display: flex;
 	justify-content: flex-end;
 	/*背景色*/
-	background-color: #008080;
+	background-color: #66CCCC;
+	/*字*/
+	font-size:30px;
+	color:#FFF;
+	font-family:sans-serif;
 }
 
 
