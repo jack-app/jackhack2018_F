@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using System;
 
 public class GameContoroler : MonoBehaviour {
     private int n;
@@ -36,7 +38,34 @@ public class GameContoroler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         StartCoroutine("Yabai");
+        StartCoroutine("Owata");
 
+        if (Input.GetAxisRaw("Submit") != 0)
+        {
+            FileStream fileMon = new FileStream("date_Mon.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileThu = new FileStream("date_Thu.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileWed = new FileStream("date_Wed.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileThe = new FileStream("date_The.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileFri = new FileStream("date_Fri.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileSat = new FileStream("date_Sat.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileSun = new FileStream("date_Sun.dat", FileMode.Create, FileAccess.Write);
+
+            BinaryWriter writerMon = new BinaryWriter(fileMon);
+            BinaryWriter writerThu = new BinaryWriter(fileThu);
+            BinaryWriter writerWed = new BinaryWriter(fileWed);
+            BinaryWriter writerThe = new BinaryWriter(fileThe);
+            BinaryWriter writerFri = new BinaryWriter(fileFri);
+            BinaryWriter writerSat = new BinaryWriter(fileSat);
+            BinaryWriter writerSun = new BinaryWriter(fileSun);
+
+            writerMon.Write(Mon);
+            writerThu.Write(Thu);
+            writerWed.Write(Wed);
+            writerThe.Write(The);
+            writerFri.Write(Fri);
+            writerSat.Write(Sat);
+            writerSun.Write(Sun);
+        }
 
     }
 
