@@ -45,7 +45,7 @@ public class SubmitButton : MonoBehaviour
 				chat.AddField("message", Uri.EscapeDataString(message));
             });
         });
-        Debug.Log(jsonobj);
+        // Debug.Log(jsonobj);
         return jsonobj;
     }
 }

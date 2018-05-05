@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Milkcocoa;
 
-public class HistoryPane : MonoBehaviour
+public class HistoryPanel : MonoBehaviour
 {   
     MilkcocoaClient milkcocoa;
     string history = string.Empty;
@@ -31,15 +31,15 @@ public class HistoryPane : MonoBehaviour
     // メソッド
 	public void milkcocoaEventHandler(MilkcocoaEvent e)
 	{
-        Debug.Log("receivedJSON");
+        // Debug.Log("receivedJSON");
         if(e.data.GetField("params").HasField("chat"))
         {
-            Debug.Log("proper syntax");
+            // Debug.Log("proper syntax");
             //受け取ったJSONファイルを読み込む
             string speakerName = e.data.GetField("params").GetField("chat").GetField("speakerName").str;
             string message = e.data.GetField("params").GetField("chat").GetField("message").str;
 
-            Debug.Log(string.Format("{0} : {1}", speakerName, message));
+            // Debug.Log(string.Format("{0} : {1}", speakerName, message));
             this.history = history + Uri.UnescapeDataString(speakerName) + " : " + Uri.UnescapeDataString(message) + System.Environment.NewLine;
         }
     }
