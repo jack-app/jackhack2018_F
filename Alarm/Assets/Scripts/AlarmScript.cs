@@ -15,10 +15,13 @@ public class AlarmScript : MonoBehaviour {
     public AudioClip Audio;
     private int now;
     public GameObject text;
+    public int take_time;
+    public bool Success;
 	// Use this for initialization
 	void Start () {
         still_touth = false;
         still_run = false;
+        Success = false;
         string getup = "--:--";
 
         FileStream fileMon  = new FileStream("dateMon.dat", FileMode.Open, FileAccess.Read);
@@ -88,12 +91,18 @@ public class AlarmScript : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if(now < 5)
+        now = DateTime.Now.Hour * 3600 + DateTime.Now.Minute * 60 + DateTime.Now.Second;
+        if (now < 5)
         {
             still_touth = false;
             still_run = false;
+            Success = false;
         }
-        now = DateTime.Now.Hour * 3600 + DateTime.Now.Minute * 60 + DateTime.Now.Second;
+        
+        if(now > Getuptime && now < Getuptime + 300)
+        {
+            take_time = now - Getuptime;
+        }
         if (still_touth == false && today_getup == true && now >= Getuptime && still_run == false) {
             AudioSource audioSource = gameObject.GetComponent<AudioSource>();
             audioSource.clip = Audio;
@@ -103,6 +112,7 @@ public class AlarmScript : MonoBehaviour {
             if (Input.GetAxisRaw("Submit") != 0)
             {
                 still_touth = true;
+                Success = true;
                 //ここにシーン切り替え・起きたメッセージを送るのを書く
                 //
             }
@@ -118,6 +128,7 @@ public class AlarmScript : MonoBehaviour {
             if (Input.GetAxisRaw("Subimt") != 0)
             {
                 still_touth = true;
+                Success = true;
                 //ここにシーン切り替え・起きたメッセージを送るのを書く
                 // SceneManager.LoadScene("");
             }
