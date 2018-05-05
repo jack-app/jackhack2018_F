@@ -31,8 +31,8 @@ public class GameContoroler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Mon_h = The_h = Wed_h = Thu_h = Fri_h = Sat_h = Sun_h = 25;
-        Mon_m = The_m = Wed_m = Thu_m = Fri_m = Sat_m = Sun_m = 70;
+        Mon_h = The_h = Wed_h = Thu_h = Fri_h = Sat_h = Sun_h = 24;
+        Mon_m = The_m = Wed_m = Thu_m = Fri_m = Sat_m = Sun_m = 60;
         n = 0;
 	}
 	
@@ -79,7 +79,7 @@ public class GameContoroler : MonoBehaviour {
             switch (n) {
                 case 0: if(Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if(Mon_h < 25)
+                        if(Mon_h < 24)
                         {
                             Mon_h++;
                         }
@@ -96,7 +96,7 @@ public class GameContoroler : MonoBehaviour {
                         }
                         else
                         {
-                            Mon_h = 25;
+                            Mon_h = 24;
                         }
                     }break;
 
@@ -128,7 +128,7 @@ public class GameContoroler : MonoBehaviour {
                 case 2:
                     if (Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if (Thu_h < 25)
+                        if (Thu_h < 24)
                         {
                             Thu_h++;
                         }
@@ -145,7 +145,7 @@ public class GameContoroler : MonoBehaviour {
                         }
                         else
                         {
-                            Thu_h = 25;
+                            Thu_h = 24;
                         }
                     }
                     break;
@@ -178,7 +178,7 @@ public class GameContoroler : MonoBehaviour {
                 case 4:
                     if (Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if (Wed_h < 25)
+                        if (Wed_h < 24)
                         {
                             Wed_h++;
                         }
@@ -195,7 +195,7 @@ public class GameContoroler : MonoBehaviour {
                         }
                         else
                         {
-                            Wed_h = 25;
+                            Wed_h = 24;
                         }
                     }
                     break;
@@ -228,7 +228,7 @@ public class GameContoroler : MonoBehaviour {
                 case 6:
                     if (Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if (The_h < 25)
+                        if (The_h < 24)
                         {
                             The_h++;
                         }
@@ -245,7 +245,7 @@ public class GameContoroler : MonoBehaviour {
                         }
                         else
                         {
-                            The_h = 25;
+                            The_h = 24;
                         }
                     }
                     break;
@@ -278,7 +278,7 @@ public class GameContoroler : MonoBehaviour {
                 case 8:
                     if (Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if (Fri_h < 25)
+                        if (Fri_h < 24)
                         {
                             Fri_h++;
                         }
@@ -295,7 +295,7 @@ public class GameContoroler : MonoBehaviour {
                         }
                         else
                         {
-                            Fri_h = 25;
+                            Fri_h = 24;
                         }
                     }
                     break;
@@ -328,7 +328,7 @@ public class GameContoroler : MonoBehaviour {
                 case 10:
                     if (Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if (Sat_h < 25)
+                        if (Sat_h < 24)
                         {
                             Sat_h++;
                         }
@@ -345,7 +345,7 @@ public class GameContoroler : MonoBehaviour {
                         }
                         else
                         {
-                            Sat_h = 25;
+                            Sat_h = 24;
                         }
                     }
                     break;
@@ -378,7 +378,7 @@ public class GameContoroler : MonoBehaviour {
                 case 12:
                     if (Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if (Sun_h < 25)
+                        if (Sun_h < 24)
                         {
                             Sun_h++;
                         }
@@ -395,7 +395,7 @@ public class GameContoroler : MonoBehaviour {
                         }
                         else
                         {
-                            Sun_h = 25;
+                            Sun_h = 24;
                         }
                     }
                     break;
@@ -426,18 +426,18 @@ public class GameContoroler : MonoBehaviour {
                     break;
             }
             
-            if(Mon_h == 25 && Mon_m == 70)
+            if(Mon_h == 24 && Mon_m == 60)
             {
                 Mon.text = "--:--";
-            }else if(Mon_h == 25)
+            }else if(Mon_h == 24)
             {
                 Mon.text = "--:" + Mon_m.ToString();
             }
-            else if (Mon_h < 10 && Mon_m == 70)
+            else if (Mon_h < 10 && Mon_m == 60)
             {
                 Mon.text = "0" + Mon_h.ToString() + ":--";
             }
-            else if(Mon_m == 70)
+            else if(Mon_m == 60)
             {
                 Mon.text = Mon_h.ToString() + ":--";
             }else if(Mon_h < 10 && Mon_m == 0)
@@ -456,19 +456,19 @@ public class GameContoroler : MonoBehaviour {
             }
 
 
-            if (Thu_h == 25 && Thu_m == 70)
+            if (Thu_h == 24 && Thu_m == 60)
             {
                 Thu.text = "--:--";
             }
-            else if (Thu_h == 25)
+            else if (Thu_h == 24)
             {
                 Thu.text = "--:" + Thu_m.ToString();
             }
-            else if (Thu_h < 10 && Thu_m == 70)
+            else if (Thu_h < 10 && Thu_m == 60)
             {
                 Thu.text = "0" + Thu_h.ToString() + ":--";
             }
-            else if (Thu_m == 70)
+            else if (Thu_m == 60)
             {
                 Thu.text = Thu_h.ToString() + ":--";
             }
@@ -490,19 +490,19 @@ public class GameContoroler : MonoBehaviour {
             }
 
 
-            if (Wed_h == 25 && Wed_m == 70)
+            if (Wed_h == 24 && Wed_m == 60)
             {
                 Wed.text = "--:--";
             }
-            else if (Wed_h == 25)
+            else if (Wed_h == 24)
             {
                 Wed.text = "--:" + Wed_m.ToString();
             }
-            else if (Wed_h < 10 && Wed_m == 70)
+            else if (Wed_h < 10 && Wed_m == 60)
             {
                 Wed.text = "0" + Wed_h.ToString() + ":--";
             }
-            else if (Wed_m == 70)
+            else if (Wed_m == 60)
             {
                 Wed.text = Wed_h.ToString() + ":--";
             }
@@ -524,19 +524,19 @@ public class GameContoroler : MonoBehaviour {
             }
 
 
-            if (The_h == 25 && The_m == 70)
+            if (The_h == 24 && The_m == 60)
             {
                 The.text = "--:--";
             }
-            else if (The_h == 25)
+            else if (The_h == 24)
             {
                 The.text = "--:" + The_m.ToString();
             }
-            else if (The_h < 10 && The_m == 70)
+            else if (The_h < 10 && The_m == 60)
             {
                 The.text = "0" + The_h.ToString() + ":--";
             }
-            else if (The_m == 70)
+            else if (The_m == 60)
             {
                 The.text = The_h.ToString() + ":--";
             }
@@ -558,19 +558,19 @@ public class GameContoroler : MonoBehaviour {
             }
 
 
-            if (Fri_h == 25 && Fri_m == 70)
+            if (Fri_h == 24 && Fri_m == 60)
             {
                 Fri.text = "--:--";
             }
-            else if (Fri_h == 25)
+            else if (Fri_h == 24)
             {
                 Fri.text = "--:" + Fri_m.ToString();
             }
-            else if (Fri_h < 10 && Fri_m == 70)
+            else if (Fri_h < 10 && Fri_m == 60)
             {
                 Fri.text = "0" + Fri_h.ToString() + ":--";
             }
-            else if (Fri_m == 70)
+            else if (Fri_m == 60)
             {
                 Fri.text = Fri_h.ToString() + ":--";
             }
@@ -592,19 +592,19 @@ public class GameContoroler : MonoBehaviour {
             }
 
 
-            if (Sat_h == 25 && Sat_m == 70)
+            if (Sat_h == 24 && Sat_m == 60)
             {
                 Sat.text = "--:--";
             }
-            else if (Sat_h == 25)
+            else if (Sat_h == 24)
             {
                 Sat.text = "--:" + Sat_m.ToString();
             }
-            else if (Sat_h < 10 && Sat_m == 70)
+            else if (Sat_h < 10 && Sat_m == 60)
             {
                 Sat.text = "0" + Sat_h.ToString() + ":--";
             }
-            else if (Sat_m == 70)
+            else if (Sat_m == 60)
             {
                 Sat.text = Sat_h.ToString() + ":--";
             }
@@ -626,19 +626,19 @@ public class GameContoroler : MonoBehaviour {
             }
 
 
-            if (Sun_h == 25 && Sun_m == 70)
+            if (Sun_h == 24 && Sun_m == 60)
             {
                 Sun.text = "--:--";
             }
-            else if (Sun_h == 25)
+            else if (Sun_h == 24)
             {
                 Sun.text = "--:" + Sun_m.ToString();
             }
-            else if(Sun_h < 10 && Sun_m == 70)
+            else if(Sun_h < 10 && Sun_m == 60)
             {
                 Sun.text = "0" + Sun_h.ToString() + ":--";
             }
-            else if (Sun_m == 70)
+            else if (Sun_m == 60)
             {
                 Sun.text = Sun_h.ToString() + ":--";
             }

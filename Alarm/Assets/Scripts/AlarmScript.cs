@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
+using UnityEngine.SceneManagement;
+
 
 public class AlarmScript : MonoBehaviour {
 
@@ -98,15 +100,32 @@ public class AlarmScript : MonoBehaviour {
             audioSource.PlayOneShot(Audio);
             still_run = true;
             text.SetActive(true);
+            if (Input.GetAxisRaw("Submit") != 0)
+            {
+                still_touth = true;
+                //ここにシーン切り替え・起きたメッセージを送るのを書く
+                //
+            }
         }
 
-        if(Input.GetAxisRaw("Submit") != 0)
+        if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
         {
-            still_touth = true;
-            //ここにシーン切り替え・起きたメッセージを送るのを書く
+            AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.clip = Audio;
+            audioSource.PlayOneShot(Audio);
+            still_run = true;
+            text.SetActive(true);
+            if (Input.GetAxisRaw("Subimt") != 0)
+            {
+                still_touth = true;
+                //ここにシーン切り替え・起きたメッセージを送るのを書く
+                // SceneManager.LoadScene("");
+            }
         }
+
         /*ここにメッセージが送られた条件を書くと音なる。 if(){
            AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+           audioSource.clip = Audio;
             audioSource.PlayOneShot(Audio);
          }*/
     }
