@@ -34,33 +34,41 @@ public class AlarmScript : MonoBehaviour {
         BinaryReader ReaderSat = new BinaryReader(fileSat);
         BinaryReader ReaderSun = new BinaryReader(fileSun);
 
-        fileMon.Seek(0, SeekOrigin.Begin);
-        if("" + System.DateTime.Now.DayOfWeek == "Monday")
+        if ("" + System.DateTime.Now.DayOfWeek == "Monday")
+        {
+            fileMon.Seek(0, SeekOrigin.Begin);
             getup = ReaderMon.ReadString();
-
-        fileThu.Seek(0, SeekOrigin.Begin);
-        if("" + System.DateTime.Now.DayOfWeek == "Tuesday")
+        }
+        if ("" + System.DateTime.Now.DayOfWeek == "Tuesday")
+        {
+            fileThu.Seek(0, SeekOrigin.Begin);
             getup = ReaderThu.ReadString();
-
-        fileWed.Seek(0, SeekOrigin.Begin);
-        if("" + System.DateTime.Now.DayOfWeek == "Wednesday")
+        }
+        if ("" + System.DateTime.Now.DayOfWeek == "Wednesday")
+        {
+            fileWed.Seek(0, SeekOrigin.Begin);
             getup = ReaderWed.ReadString();
-
-        fileThe.Seek(0, SeekOrigin.Begin);
-        if("" + System.DateTime.Now.DayOfWeek == "Thursday")
+        }
+        if ("" + System.DateTime.Now.DayOfWeek == "Thursday")
+        {
+            fileThe.Seek(0, SeekOrigin.Begin);
             getup = ReaderThe.ReadString();
-
-        fileFri.Seek(0, SeekOrigin.Begin);
-        if("" + System.DateTime.Now.DayOfWeek == "Friday")
+        }
+        if ("" + System.DateTime.Now.DayOfWeek == "Friday")
+        {
+            fileFri.Seek(0, SeekOrigin.Begin);
             getup = ReaderFri.ReadString();
-
-        fileSat.Seek(0, SeekOrigin.Begin);
-        if("" + System.DateTime.Now.DayOfWeek == "Saturday")
+        }
+        if ("" + System.DateTime.Now.DayOfWeek == "Saturday")
+        {
+            fileSat.Seek(0, SeekOrigin.Begin);
             getup = ReaderSat.ReadString();
-
-        fileSun.Seek(0, SeekOrigin.Begin);
-        if("" + System.DateTime.Now.DayOfWeek == "Sunday")
+        }
+        if ("" + System.DateTime.Now.DayOfWeek == "Sunday")
+        {
+            fileSun.Seek(0, SeekOrigin.Begin);
             getup = ReaderSun.ReadString();
+        }
 
         if(getup[0] == '-' || getup[3] == '-')
         {

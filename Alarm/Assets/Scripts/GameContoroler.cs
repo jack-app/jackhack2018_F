@@ -59,13 +59,13 @@ public class GameContoroler : MonoBehaviour {
             BinaryWriter writerSat = new BinaryWriter(fileSat);
             BinaryWriter writerSun = new BinaryWriter(fileSun);
 
-            writerMon.Write(Mon);
-            writerThu.Write(Thu);
-            writerWed.Write(Wed);
-            writerThe.Write(The);
-            writerFri.Write(Fri);
-            writerSat.Write(Sat);
-            writerSun.Write(Sun);
+            writerMon.Write(Mon.ToString());
+            writerThu.Write(Thu.ToString());
+            writerWed.Write(Wed.ToString());
+            writerThe.Write(The.ToString());
+            writerFri.Write(Fri.ToString());
+            writerSat.Write(Sat.ToString());
+            writerSun.Write(Sun.ToString());
 
             SceneManager.LoadScene("アラーム画面");
         }
