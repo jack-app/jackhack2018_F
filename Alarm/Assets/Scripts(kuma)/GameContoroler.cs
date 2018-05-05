@@ -428,18 +428,22 @@ public class GameContoroler : MonoBehaviour {
             
             if(Mon_h == 24 && Mon_m == 60)
             {
-                Mon.text = "--:--";
-            }else if(Mon_h == 24)
+                Mon.text = "- - :- -";
+            }else if(Mon_h == 24 && Mon_m == 0)
             {
-                Mon.text = "--:" + Mon_m.ToString();
+                Mon.text = "- - :00"; 
+            }
+            else if(Mon_h == 24)
+            {
+                Mon.text = "- - :" + Mon_m.ToString();
             }
             else if (Mon_h < 10 && Mon_m == 60)
             {
-                Mon.text = "0" + Mon_h.ToString() + ":--";
+                Mon.text = "0" + Mon_h.ToString() + ":- -";
             }
             else if(Mon_m == 60)
             {
-                Mon.text = Mon_h.ToString() + ":--";
+                Mon.text = Mon_h.ToString() + ":- -";
             }else if(Mon_h < 10 && Mon_m == 0)
             {
                 Mon.text = "0" + Mon_h.ToString() + ":00";
@@ -458,19 +462,22 @@ public class GameContoroler : MonoBehaviour {
 
             if (Thu_h == 24 && Thu_m == 60)
             {
-                Thu.text = "--:--";
+                Thu.text = "- - :- -";
+            }else if(Thu_h == 24 && Thu_m == 0)
+            {
+                Thu.text = "- - :00";
             }
             else if (Thu_h == 24)
             {
-                Thu.text = "--:" + Thu_m.ToString();
+                Thu.text = "- - :" + Thu_m.ToString();
             }
             else if (Thu_h < 10 && Thu_m == 60)
             {
-                Thu.text = "0" + Thu_h.ToString() + ":--";
+                Thu.text = "0" + Thu_h.ToString() + ":- -";
             }
             else if (Thu_m == 60)
             {
-                Thu.text = Thu_h.ToString() + ":--";
+                Thu.text = Thu_h.ToString() + ":- -";
             }
             else if (Thu_h < 10 && Thu_m == 0)
             {
@@ -492,19 +499,22 @@ public class GameContoroler : MonoBehaviour {
 
             if (Wed_h == 24 && Wed_m == 60)
             {
-                Wed.text = "--:--";
+                Wed.text = "- - :- -";
+            }else if(Wed_h == 24 && Wed_m == 0)
+            {
+                Wed.text = "- - :00";
             }
             else if (Wed_h == 24)
             {
-                Wed.text = "--:" + Wed_m.ToString();
+                Wed.text = "- - :" + Wed_m.ToString();
             }
             else if (Wed_h < 10 && Wed_m == 60)
             {
-                Wed.text = "0" + Wed_h.ToString() + ":--";
+                Wed.text = "0" + Wed_h.ToString() + ":- -";
             }
             else if (Wed_m == 60)
             {
-                Wed.text = Wed_h.ToString() + ":--";
+                Wed.text = Wed_h.ToString() + ":- -";
             }
             else if (Wed_h < 10 && Wed_m == 0)
             {
@@ -526,19 +536,22 @@ public class GameContoroler : MonoBehaviour {
 
             if (The_h == 24 && The_m == 60)
             {
-                The.text = "--:--";
+                The.text = "- - :- -";
+            }else if(The_h == 24 && Thu_m == 0)
+            {
+                The.text = "- - :00";
             }
             else if (The_h == 24)
             {
-                The.text = "--:" + The_m.ToString();
+                The.text = "- - :" + The_m.ToString();
             }
             else if (The_h < 10 && The_m == 60)
             {
-                The.text = "0" + The_h.ToString() + ":--";
+                The.text = "0" + The_h.ToString() + ":- -";
             }
             else if (The_m == 60)
             {
-                The.text = The_h.ToString() + ":--";
+                The.text = The_h.ToString() + ":- -";
             }
             else if (The_h < 10 && The_m == 0)
             {
@@ -560,19 +573,22 @@ public class GameContoroler : MonoBehaviour {
 
             if (Fri_h == 24 && Fri_m == 60)
             {
-                Fri.text = "--:--";
+                Fri.text = "- - :- -";
+            }else if(Fri_h == 24 && Fri_m == 0)
+            {
+                Fri.text = "- - :00";
             }
             else if (Fri_h == 24)
             {
-                Fri.text = "--:" + Fri_m.ToString();
+                Fri.text = "- - :" + Fri_m.ToString();
             }
             else if (Fri_h < 10 && Fri_m == 60)
             {
-                Fri.text = "0" + Fri_h.ToString() + ":--";
+                Fri.text = "0" + Fri_h.ToString() + ":- -";
             }
             else if (Fri_m == 60)
             {
-                Fri.text = Fri_h.ToString() + ":--";
+                Fri.text = Fri_h.ToString() + ":- -";
             }
             else if (Fri_h < 10 && Fri_m == 0)
             {
@@ -594,19 +610,22 @@ public class GameContoroler : MonoBehaviour {
 
             if (Sat_h == 24 && Sat_m == 60)
             {
-                Sat.text = "--:--";
+                Sat.text = "- - :- -";
+            }else if(Sat_h == 24 && Sat_m == 0)
+            {
+                Sat.text = "- - :00";
             }
             else if (Sat_h == 24)
             {
-                Sat.text = "--:" + Sat_m.ToString();
+                Sat.text = "- - :" + Sat_m.ToString();
             }
             else if (Sat_h < 10 && Sat_m == 60)
             {
-                Sat.text = "0" + Sat_h.ToString() + ":--";
+                Sat.text = "0" + Sat_h.ToString() + ":- -";
             }
             else if (Sat_m == 60)
             {
-                Sat.text = Sat_h.ToString() + ":--";
+                Sat.text = Sat_h.ToString() + ":- -";
             }
             else if (Sat_h < 10 && Sat_m == 0)
             {
@@ -628,7 +647,10 @@ public class GameContoroler : MonoBehaviour {
 
             if (Sun_h == 24 && Sun_m == 60)
             {
-                Sun.text = "--:--";
+                Sun.text = "- - :- -";
+            }else if(Sun_h == 24 && Sun_m == 0)
+            {
+                Sun.text = "- - :00";
             }
             else if (Sun_h == 24)
             {
