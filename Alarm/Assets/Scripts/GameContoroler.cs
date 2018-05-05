@@ -43,13 +43,13 @@ public class GameContoroler : MonoBehaviour {
 
         if (Input.GetAxisRaw("Submit") != 0)
         {
-            FileStream fileMon = new FileStream("date_Mon.dat", FileMode.Create, FileAccess.Write);
-            FileStream fileThu = new FileStream("date_Thu.dat", FileMode.Create, FileAccess.Write);
-            FileStream fileWed = new FileStream("date_Wed.dat", FileMode.Create, FileAccess.Write);
-            FileStream fileThe = new FileStream("date_The.dat", FileMode.Create, FileAccess.Write);
-            FileStream fileFri = new FileStream("date_Fri.dat", FileMode.Create, FileAccess.Write);
-            FileStream fileSat = new FileStream("date_Sat.dat", FileMode.Create, FileAccess.Write);
-            FileStream fileSun = new FileStream("date_Sun.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileMon = new FileStream("dateMon.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileThu = new FileStream("dateThu.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileWed = new FileStream("dateWed.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileThe = new FileStream("dateThe.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileFri = new FileStream("dateFri.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileSat = new FileStream("dateSat.dat", FileMode.Create, FileAccess.Write);
+            FileStream fileSun = new FileStream("dateSun.dat", FileMode.Create, FileAccess.Write);
 
             BinaryWriter writerMon = new BinaryWriter(fileMon);
             BinaryWriter writerThu = new BinaryWriter(fileThu);
