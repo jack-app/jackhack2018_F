@@ -4,6 +4,7 @@ using UnityEngine;
 using System;
 using System.IO;
 using UnityEngine.SceneManagement;
+using Milkcocoa;
 
 
 public class AlarmScript : MonoBehaviour {
@@ -17,12 +18,18 @@ public class AlarmScript : MonoBehaviour {
     public GameObject text;
     public int take_time;
     public bool Success;
+
+    public MilkcocoaClient milkcocoa;
+
 	// Use this for initialization
 	void Start () {
         still_touth = false;
         still_run = false;
         Success = false;
         string getup = "--:--";
+
+        milkcocoa = FindObjectOfType<MilkcocoaClient>();
+        milkcocoa.OnSend(milkcocoaEventHandler);
 
         FileStream fileMon  = new FileStream("dateMon.dat", FileMode.Open, FileAccess.Read);
         FileStream fileThu = new FileStream("dateThu.dat", FileMode.Open, FileAccess.Read);
@@ -109,13 +116,6 @@ public class AlarmScript : MonoBehaviour {
             audioSource.PlayOneShot(Audio);
             still_run = true;
             text.SetActive(true);
-            if (Input.GetAxisRaw("Submit") != 0)
-            {
-                still_touth = true;
-                Success = true;
-                //ここにシーン切り替え・起きたメッセージを送るのを書く
-                //
-            }
         }
 
         if(Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
@@ -125,19 +125,22 @@ public class AlarmScript : MonoBehaviour {
             audioSource.PlayOneShot(Audio);
             still_run = true;
             text.SetActive(true);
-            if (Input.GetAxisRaw("Subimt") != 0)
-            {
-                still_touth = true;
-                Success = true;
-                //ここにシーン切り替え・起きたメッセージを送るのを書く
-                // SceneManager.LoadScene("");
-            }
         }
 
-        /*ここにメッセージが送られた条件を書くと音なる。 if(){
-           AudioSource audioSource = gameObject.GetComponent<AudioSource>();
-           audioSource.clip = Audio;
-            audioSource.PlayOneShot(Audio);
-         }*/
+        if (still_run)
+        {
+            if (Input.GetAxisRaw("Submit") != 0)
+            {
+                SceneManager.LoadScene("Scenes/ChatRoom");
+            }
+
+        }
+    }
+
+    void milkcocoaEventHandler(MilkcocoaEvent e)
+    {
+        AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+        audioSource.clip = Audio;
+        audioSource.PlayOneShot(Audio);
     }
 }
