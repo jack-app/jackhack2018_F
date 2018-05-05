@@ -59,13 +59,13 @@ public class GameContoroler : MonoBehaviour {
             BinaryWriter writerSat = new BinaryWriter(fileSat);
             BinaryWriter writerSun = new BinaryWriter(fileSun);
 
-            writerMon.Write(Mon.ToString());
-            writerThu.Write(Thu.ToString());
-            writerWed.Write(Wed.ToString());
-            writerThe.Write(The.ToString());
-            writerFri.Write(Fri.ToString());
-            writerSat.Write(Sat.ToString());
-            writerSun.Write(Sun.ToString());
+            writerMon.Write(Mon.text);
+            writerThu.Write(Thu.text);
+            writerWed.Write(Wed.text);
+            writerThe.Write(The.text);
+            writerFri.Write(Fri.text);
+            writerSat.Write(Sat.text);
+            writerSun.Write(Sun.text);
 
             SceneManager.LoadScene("アラーム画面");
         }
@@ -103,7 +103,7 @@ public class GameContoroler : MonoBehaviour {
                 case 1:
                     if (Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if (Mon_m < 70)
+                        if (Mon_m < 60)
                         {
                             Mon_m += 10;
                         }
@@ -120,7 +120,7 @@ public class GameContoroler : MonoBehaviour {
                         }
                         else
                         {
-                            Mon_m = 70;
+                            Mon_m = 60;
                         }
                     }
                     break;
@@ -153,7 +153,7 @@ public class GameContoroler : MonoBehaviour {
                 case 3:
                     if (Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if (Thu_m < 70)
+                        if (Thu_m < 60)
                         {
                             Thu_m += 10;
                         }
@@ -170,7 +170,7 @@ public class GameContoroler : MonoBehaviour {
                         }
                         else
                         {
-                            Thu_m = 70;
+                            Thu_m = 60;
                         }
                     }
                     break;
@@ -203,7 +203,7 @@ public class GameContoroler : MonoBehaviour {
                 case 5:
                     if (Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if (Wed_m < 70)
+                        if (Wed_m < 60)
                         {
                             Wed_m += 10;
                         }
@@ -220,7 +220,7 @@ public class GameContoroler : MonoBehaviour {
                         }
                         else
                         {
-                            Wed_m = 70;
+                            Wed_m = 60;
                         }
                     }
                     break;
@@ -253,7 +253,7 @@ public class GameContoroler : MonoBehaviour {
                 case 7:
                     if (Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if (The_m < 70)
+                        if (The_m < 60)
                         {
                             The_m += 10;
                         }
@@ -269,8 +269,8 @@ public class GameContoroler : MonoBehaviour {
                             The_m -= 10;
                         }
                         else
-                        {
-                            The_m = 70;
+                        { 
+                            The_m = 60;
                         }
                     }
                     break;
@@ -303,7 +303,7 @@ public class GameContoroler : MonoBehaviour {
                 case 9:
                     if (Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if (Fri_m < 70)
+                        if (Fri_m < 60)
                         {
                             Fri_m += 10;
                         }
@@ -320,7 +320,7 @@ public class GameContoroler : MonoBehaviour {
                         }
                         else
                         {
-                            Fri_m = 70;
+                            Fri_m = 60;
                         }
                     }
                     break;
@@ -353,7 +353,7 @@ public class GameContoroler : MonoBehaviour {
                 case 11:
                     if (Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if (Sat_m < 70)
+                        if (Sat_m < 60)
                         {
                             Sat_m += 10;
                         }
@@ -370,7 +370,7 @@ public class GameContoroler : MonoBehaviour {
                         }
                         else
                         {
-                            Sat_m = 70;
+                            Sat_m = 60;
                         }
                     }
                     break;
@@ -403,7 +403,7 @@ public class GameContoroler : MonoBehaviour {
                 case 13:
                     if (Input.GetAxisRaw("Vertical") == 1)
                     {
-                        if (Sun_m < 70)
+                        if (Sun_m < 60)
                         {
                             Sun_m += 10;
                         }
@@ -420,7 +420,7 @@ public class GameContoroler : MonoBehaviour {
                         }
                         else
                         {
-                            Sun_m = 70;
+                            Sun_m = 60;
                         }
                     }
                     break;

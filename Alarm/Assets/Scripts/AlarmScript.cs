@@ -12,6 +12,7 @@ public class AlarmScript : MonoBehaviour {
     private bool still_run;
     public AudioClip Audio;
     private int now;
+    public GameObject text;
 	// Use this for initialization
 	void Start () {
         still_touth = false;
@@ -93,8 +94,10 @@ public class AlarmScript : MonoBehaviour {
         now = DateTime.Now.Hour * 3600 + DateTime.Now.Minute * 60 + DateTime.Now.Second;
         if (still_touth == false && today_getup == true && now >= Getuptime && still_run == false) {
             AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.clip = Audio;
             audioSource.PlayOneShot(Audio);
             still_run = true;
+            text.SetActive(true);
         }
 
         if(Input.GetAxisRaw("Submit") != 0)
