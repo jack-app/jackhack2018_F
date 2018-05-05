@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GameContoroler : MonoBehaviour {
     private int n;
@@ -65,6 +66,8 @@ public class GameContoroler : MonoBehaviour {
             writerFri.Write(Fri);
             writerSat.Write(Sat);
             writerSun.Write(Sun);
+
+            SceneManager.LoadScene("アラーム画面");
         }
 
     }

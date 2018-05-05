@@ -9,11 +9,13 @@ public class AlarmScript : MonoBehaviour {
     private int Getuptime;
     private bool still_touth;
     private bool today_getup;
+    private bool still_run;
     public AudioClip Audio;
     private int now;
 	// Use this for initialization
 	void Start () {
         still_touth = false;
+        still_run = false;
         string getup = "--:--";
 
         FileStream fileMon  = new FileStream("dateMon.dat", FileMode.Open, FileAccess.Read);
@@ -78,12 +80,23 @@ public class AlarmScript : MonoBehaviour {
         if(now < 5)
         {
             still_touth = false;
+            still_run = false;
         }
         now = DateTime.Now.Hour * 3600 + DateTime.Now.Minute * 60 + DateTime.Now.Second;
-        if (still_touth == false && today_getup == true && now >= Getuptime) {
+        if (still_touth == false && today_getup == true && now >= Getuptime && still_run == false) {
             AudioSource audioSource = gameObject.GetComponent<AudioSource>();
             audioSource.PlayOneShot(Audio);
+            still_run = true;
         }
 
+        if(Input.GetAxisRaw("Submit") != 0)
+        {
+            still_touth = true;
+            //ここにシーン切り替え・起きたメッセージを送るのを書く
+        }
+        /*ここにメッセージが送られた条件を書くと音なる。 if(){
+           AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.PlayOneShot(Audio);
+         }*/
     }
 }
