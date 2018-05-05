@@ -279,7 +279,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.19332227, y: 0.9}
   m_AnchorMax: {x: 0.8096774, y: 1}
-  m_AnchoredPosition: {x: 12.548996, y: 5.649994}
+  m_AnchoredPosition: {x: 12.549011, y: 5.649994}
   m_SizeDelta: {x: -26, y: -11.300049}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &819299353
@@ -696,7 +696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.0000076293945, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.000015259, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1193120048
@@ -771,10 +771,10 @@ RectTransform:
   m_Father: {fileID: 1147415990}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.05, y: 0.34879532}
-  m_AnchorMax: {x: 0.5, y: 0.467}
-  m_AnchoredPosition: {x: -2.2799988, y: 1.1600037}
-  m_SizeDelta: {x: -15.65, y: -18.31}
+  m_AnchorMin: {x: 0.26988888, y: 0.407}
+  m_AnchorMax: {x: 0.26988888, y: 0.407}
+  m_AnchoredPosition: {x: -1.2799988, y: 1.6600037}
+  m_SizeDelta: {x: 106.35, y: 32.690002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1426122412
 MonoBehaviour:
@@ -824,7 +824,18 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: OnEndEdit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.InputField+SubmitEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
@@ -981,7 +992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6566445, y: 0.36735687}
   m_AnchorMax: {x: 0.95000005, y: 0.467}
-  m_AnchoredPosition: {x: 0.19999695, y: 1}
+  m_AnchoredPosition: {x: 0.2000122, y: 1}
   m_SizeDelta: {x: -11.5, y: -21.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1570920595
