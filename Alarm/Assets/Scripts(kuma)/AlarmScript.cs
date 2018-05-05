@@ -26,7 +26,7 @@ public class AlarmScript : MonoBehaviour {
         still_touth = false;
         still_run = false;
         Success = false;
-        string getup = "--:--";
+        string getup = "- - :- -";
 
         milkcocoa = FindObjectOfType<MilkcocoaClient>();
         milkcocoa.OnSend(milkcocoaEventHandler);
@@ -83,7 +83,7 @@ public class AlarmScript : MonoBehaviour {
             getup = ReaderSun.ReadString();
         }
 
-        if(getup[0] == '-' || getup[3] == '-')
+        if(getup[0] == '-' || getup[5] == '-')
         {
             today_getup = false;
         }
